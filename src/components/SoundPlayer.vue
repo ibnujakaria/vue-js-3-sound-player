@@ -22,6 +22,7 @@
 
       <div class="progress">
         <div
+          v-if="duration"
           class="value"
           :style="{
             width: `${currentTime / duration * 100}%`
