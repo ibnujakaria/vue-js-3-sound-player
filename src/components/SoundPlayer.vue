@@ -89,7 +89,6 @@ export default {
   color: white;
   padding: .75rem 1.25rem;
   border-radius: 5rem;
-  font-family: 'Roboto', sans-serif;
   font-weight: 600;
   display: flex;
   justify-content: space-between;
