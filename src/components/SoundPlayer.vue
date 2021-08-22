@@ -17,7 +17,7 @@
       </button>
 
       <div class="duration">
-        0:{{ currentTimeHuman }} / 0:{{ duration }}
+        0:{{ currentTimeHuman }} / 0:{{ durationForHuman }}
       </div>
 
       <div class="progress">
@@ -68,6 +68,10 @@ export default {
       return time < 10 ? `0${time}` : time
     })
 
+    const durationForHuman = computed(
+      () => duration.value < 10 ? `0${duration.value}` : duration.value
+    )
+
     return {
       audio,
       play,
@@ -76,6 +80,7 @@ export default {
       currentTime,
       isPlaying,
       currentTimeHuman,
+      durationForHuman
     }
   },
 }
